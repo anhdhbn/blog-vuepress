@@ -24,9 +24,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:serve": "vuepress dev docs --debug",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev docs",
+    "serve": "vuepress dev docs --debug",
+    "build": "vuepress build docs"
   },
   "keywords": [
     "AnhDH's",

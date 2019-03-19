@@ -1,5 +1,5 @@
 module.exports = {
-	theme: 'yubisaki',
+	// theme: 'yubisaki',
 	base: "/",
   title: 'IO',
   description: 'vuepress theme Yubisaki',

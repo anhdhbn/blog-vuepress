@@ -3,7 +3,8 @@ title: Hello
 date: 2019/02/23 23:51:03
 type: post
 tag:
-  - typescript
+  - typescript, ahihi
+  - ahihi
 meta:
   -
     name: description
