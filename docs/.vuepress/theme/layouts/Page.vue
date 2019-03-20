@@ -17,9 +17,17 @@
         </p>
       </div>
     </div>
-    <div id="comment-container" v-if="isComment">
-      <Vssue :title="title" :options="$site.themeConfig.comment" />
+    <div id="comment-container" v-if="isCommentGithub">
+      <Vssue :title="title" :options="$site.themeConfig.comment"/>
     </div>
+    <div class="comment-container" v-if="isCommentDisqus">
+        <vue-disqus
+          :shortname="$site.themeConfig.comment.shortname"
+          :title="title"
+          
+          :url="$site.themeConfig.comment.url"
+        ></vue-disqus>
+      </div>
   </LayoutContainer>
 </template>
 
@@ -30,6 +38,15 @@ import {
   endingSlashRE,
   pageNormalize
 } from "../lib/util";
+
+// import KatexMath from 'vue-a11y-katex'
+import Vue from 'vue'
+import VueDisqus from 'vue-disqus'
+import VueKatex from 'vue-katex'
+
+Vue.use(VueDisqus)
+Vue.use(VueKatex)
+// Vue.use(KatexMath)
 
 export default {
   props: ["sidebarItems"],
@@ -57,8 +74,11 @@ export default {
     title() {
       return this.$page.frontmatter.title;
     },
-    isComment() {
-      return this.$site.themeConfig.comment && this.$page.type === "post";
+    isCommentGithub() {
+      return this.$site.themeConfig.comment.useGithub === true && this.$page.type === "post";
+    },
+    isCommentDisqus() {
+      return this.$site.themeConfig.comment.useDisqus === true && this.$page.type === "post";
     },
     createTime() {
       const stamp = this.$page.frontmatter.date;
@@ -96,9 +116,15 @@ function find(name, pages, offset) {
 
 <style lang="stylus" src="../styles/theme.styl"></style>
 <style lang="stylus" src="../styles/card.styl"></style>
+<style>
+  /* @import "../../../../node_modules/katex/dist/katex.min.css"; */
+  @import "https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css";
+</style> 
+
 <style lang="stylus">
 @import '../styles/config.styl';
 @import '../styles/vssue.styl';
+
 
 #comment-container {
   color: #6190E8;

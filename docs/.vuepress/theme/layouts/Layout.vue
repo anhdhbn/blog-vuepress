@@ -1,5 +1,6 @@
 <template>
   <LayoutContainer>
+    
     <List :items="$pagination.posts"/>
     <Pagination />
   </LayoutContainer>
@@ -7,8 +8,8 @@
 
 <style lang="stylus" src="../styles/theme.styl"></style>
 <style lang='stylus'>
-@import '../styles/config.styl';
 
+@import '../styles/config.styl';
 .main
   width $appWidth
   padding 1rem

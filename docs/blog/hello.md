@@ -14,12 +14,8 @@ meta:
     content: Typescript React Redux
 ---
 
-## Hello Yubisaki
+## Math
 
-Here are summary
 
-<!-- more -->
-
-## Start
-
-Thanks for using yubisaki
+<div v-katex:display="'\\frac{a_i}{1+x}'"></div>
+<div v-katex:display="'c = \\pm\\sqrt{a^2 + b^2}'"></div>

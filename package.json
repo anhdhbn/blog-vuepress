@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@iktakahiro/markdown-it-katex": "^3.1.0",
     "@vssue/api-github-v3": "^0.5.0",
     "@vssue/vuepress-plugin-vssue": "^0.5.0",
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.23",
@@ -10,9 +11,19 @@
     "@yubisaki/vuepress-plugin-blog": "^0.1.5",
     "@yubisaki/vuepress-plugin-pagination": "^0.1.6",
     "html2canvas": "^1.0.0-alpha.12",
+    "katex": "^0.10.1",
+    "markdown-it": "^8.4.2",
     "markdown-it-imsize": "^2.0.1",
+    "markdown-it-katex": "^2.0.3",
+    "markdown-it-math": "^4.1.1",
     "markdown-it-task-lists": "^2.1.1",
+    "markdown-it-texmath": "^0.5.5",
+    "markdown-latex-loader": "0.0.0-alpha",
+    "markdown-loader": "^5.0.0",
     "vssue": "^0.5.0",
+    "vue-a11y-katex": "0.0.10",
+    "vue-disqus": "^3.0.5",
+    "vue-katex": "^0.2.0",
     "vuepress": "^1.0.0-alpha.39",
     "vuepress-plugin-flowchart": "^1.4.2",
     "vuepress-theme-yubisaki": "^3.1.4"
